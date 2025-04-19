@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Trivia Challenge</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="assets/favicon.ico?v=2" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png?v=2">
+    <link rel="manifest" href="assets/site.webmanifest?v=2">
+  </head>
+  <body>
+    <div class="container">
+      <div class="start-screen" id="startScreen">
+        <h1>🏅Ultimate Sports Quiz</h1>
+        <p>
+          Put your sports knowledge to the test with these 10 moderately
+          challenging questions!
+        </p>
+        <img src="assets/sports.png" alt="Sports Trivia" class="quiz-image" />
+        <div class="answer-key">
+          <p><span class="key correct"></span> Correct Answer</p>
+          <p><span class="key incorrect"></span> Incorrect Answer</p>
+        </div>
+
+        <button class="btn" id="startBtn">Start Quiz</button>
+      </div>
+      <div class="loading hidden" id="loadingScreen">
+        <p>Hang tight, loading your questions... ⏳</p>
+      </div>
+
+      <div class="game-screen hidden" id="gameScreen">
+        <div class="simple-timer">Time: <span id="timer">60</span>s</div>
+        <div class="progress-bar">
+          <div class="progress" id="progressBar"></div>
+        </div>
+
+        <div class="score-display">
+          Score: <span id="score">0</span>/<span id="totalQuestions">10</span>
+        </div>
+
+        <div class="category" id="category">Sports</div>
+        <div class="difficulty medium" id="difficulty">Medium</div>
+
+        <div class="question" id="question"></div>
+
+        <div class="options-container" id="optionsContainer"></div>
+
+        <button class="btn hidden" id="nextBtn">Next Question</button>
+      </div>
+
+      <div class="end-screen hidden" id="endScreen">
+        <h1>Quiz Successfully Completed!</h1>
+        <div class="final-score">
+          Your score: <span id="finalScore">0</span>/<span id="finalTotal"
+            >10</span
+          >
+        </div>
+        <button class="btn" id="restartBtn">Restart Quiz</button>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
